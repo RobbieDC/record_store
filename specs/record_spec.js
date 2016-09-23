@@ -13,4 +13,12 @@ describe("record", function() {
     assert.equal( "Justin Bieber", record_jb.artist );
   });
 
+  it("record has title", function() {
+    assert.equal( "My World 2.0", record_jb.title );
+  });
+
+  it("record has price", function() {
+    assert.equal( 0.01, record_jb.price );
+  });
+
 });
