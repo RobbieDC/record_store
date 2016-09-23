@@ -13,4 +13,12 @@ describe("store", function() {
     assert.equal( "Bieber & Beyond", store1.name );
   });
 
+  it("store has city", function() {
+    assert.equal( "Glasgow", store1.city );
+  });
+
+  it("store has empty record array", function() {
+    assert.deepEqual( [], store1.records );
+  });
+
 });
