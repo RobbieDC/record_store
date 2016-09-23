@@ -27,6 +27,15 @@ Store.prototype = {
     var index = this.records.indexOf( record );
     this.records.splice( index, 1 );
     this.balance += record.price;
+  },
+
+  totalAssetValue: function() {
+    var totalValue = 0;
+    totalValue += this.balance;
+    for(var record of this.records) {
+      totalValue += record.price;
+    }
+    return totalValue;
   }
 
 }

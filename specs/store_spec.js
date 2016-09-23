@@ -59,4 +59,9 @@ describe("store record interction", function() {
     assert.equal( 20.02, store2.balance );
   });
 
+  it("check store assets", function() {
+    var totalValue = store2.totalAssetValue();
+    assert.equal( 220.05, totalValue );
+  });
+
 });
