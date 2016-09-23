@@ -49,4 +49,8 @@ describe("store record interction", function() {
     assert.deepEqual( [record1, record2, record3], store2.records );
   });
 
+  it("can list inventory", function() {
+    assert.equal("string", typeof(store2.listInventory()));
+  })
+
 });
