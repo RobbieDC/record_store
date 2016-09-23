@@ -32,15 +32,21 @@ describe("store record interction", function() {
 
   var store2;
   var record1;
+  var record2;
+  var record3;
 
   beforeEach(function() {
-    store2 = new Store( "Bieber Boutique", "Paisley" );
-    record1 = new Record( "Justin Bieber", "Believe" );
+    store2 = new Store( "Bieber Boutique", "Paisley", 20 );
+    record1 = new Record( "Justin Bieber", "Believe", 0.02 );
+    record2 = new Record( "One Direction", "Up All Night", 0.03 );
+    record3 = new Record( "Spice Girls", "Spiceworld", 200 );
+    store2.addRecord( record1 );
+    store2.addRecord( record2 );
+    store2.addRecord( record3 );
   });
 
   it("can add record to store", function() {
-    store2.addRecord( record1 );
-    assert.deepEqual( [record1], store2.records );
+    assert.deepEqual( [record1, record2, record3], store2.records );
   });
 
 });
