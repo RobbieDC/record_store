@@ -10,7 +10,7 @@ describe("store", function() {
   });
 
   it("store has name", function() {
-    assertt.equal( "Bieber & Beyond", store1.name );
+    assert.equal( "Bieber & Beyond", store1.name );
   });
 
 });
