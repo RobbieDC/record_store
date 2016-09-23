@@ -4,4 +4,10 @@ var Store = function(name, city) {
   this.records = [];
 }
 
+Store.prototype = {
+  addRecord: function( record ) {
+    this.records.push( record );
+  }
+}
+
 module.exports = Store;
