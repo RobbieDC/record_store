@@ -21,14 +21,13 @@ Store.prototype = {
       inventoryList.push(formattedRecord);
     });
     return inventoryList.join("\n");
-  }
+  },
 
-  // var kvArray = [{key:1, value:10}, {key:2, value:20}, {key:3, value: 30}];
-  // var reformattedArray = kvArray.map(function(obj){ 
-  //    var rObj = {};
-  //    rObj[obj.key] = obj.value;
-  //    return rObj;
-  // });
+  sellRecord: function( record ) {
+    var index = this.records.indexOf( record );
+    this.records.splice( index, 1 );
+    this.balance += record.price;
+  }
 
 }
 

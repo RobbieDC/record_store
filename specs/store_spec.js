@@ -50,7 +50,13 @@ describe("store record interction", function() {
   });
 
   it("can list inventory", function() {
-    assert.equal("string", typeof(store2.listInventory()));
-  })
+    assert.equal( "string", typeof(store2.listInventory()) );
+  });
+
+  it("can sell record", function() {
+    store2.sellRecord( record1 );
+    assert.deepEqual( [record2, record3], store2.records );
+    assert.equal( 20.02, store2.balance );
+  });
 
 });
