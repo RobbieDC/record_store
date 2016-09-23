@@ -1,7 +1,8 @@
-var Store = function(name, city) {
+var Store = function(name, city, balance) {
   this.name = name;
   this.city = city;
   this.records = [];
+  this.balance = balance;
 }
 
 Store.prototype = {

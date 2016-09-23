@@ -7,7 +7,7 @@ describe("store", function() {
   var store1;
 
   beforeEach(function() {
-    store1 = new Store("Bieber & Beyond", "Glasgow");
+    store1 = new Store("Bieber & Beyond", "Glasgow", 200);
   });
 
   it("store has name", function() {
@@ -20,6 +20,10 @@ describe("store", function() {
 
   it("store has empty record array", function() {
     assert.deepEqual( [], store1.records );
+  });
+
+  it("store has balance", function() {
+    assert.equal( 200, store1.balance );
   });
 
 });
@@ -36,6 +40,7 @@ describe("store record interction", function() {
 
   it("can add record to store", function() {
     store2.addRecord( record1 );
+    assert.deepEqual( [record1], store2.records );
   });
 
 });
