@@ -22,3 +22,20 @@ describe("collector", function() {
   });
 
 });
+
+describe("collector store record interaction", function() {
+
+  var aberdeenJBFan;
+  var record1;
+  var store1;
+
+  beforeEach(function() {
+    aberdeenJBFan = new Collector( "Mavid Dorrison", 250 );
+    record1 = new Record( "Justin Bieber", "My World 2.0" );
+  });
+
+  it("collector can buy record from store", function() {
+
+  });
+
+});

@@ -4,4 +4,11 @@ var Collector = function( name, cash ) {
   this.records = [];
 }
 
+Collector.prototype = {
+  buyRecord: function( record, store ) {
+    store.sellRecord( record );
+    this.records.push( record );
+  }
+}
+
 module.exports = Collector;
