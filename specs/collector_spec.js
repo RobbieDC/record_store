@@ -45,4 +45,12 @@ describe("collector store record interaction", function() {
     assert.deepEqual( [], store1.records );
   });
 
+  it("collector can sell record to store", function() {
+    aberdeenJBFan.records.push( record1 );
+    aberdeenJBFan.sellRecord( record1, store1 );
+    assert.deepEqual( [], aberdeenJBFan.records );
+    assert.equal( 260, aberdeenJBFan.cash );
+    assert.deepEqual( [record1], store1.records );
+  });
+
 });

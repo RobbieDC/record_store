@@ -9,6 +9,14 @@ Collector.prototype = {
     store.sellRecord( record );
     this.records.push( record );
     this.cash -= record.price;
+  },
+
+  sellRecord: function( record, store ) {
+    var recordIndex = this.records.indexOf( record );
+    this.records.splice( recordIndex, 1 );
+    this.cash += record.price;
+    store.addRecord( record );
+    store.balance += record.price;
   }
 }
 
