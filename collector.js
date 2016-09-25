@@ -8,6 +8,7 @@ Collector.prototype = {
   buyRecord: function( record, store ) {
     store.sellRecord( record );
     this.records.push( record );
+    this.cash -= record.price;
   }
 }
 
